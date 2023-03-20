@@ -8,3 +8,6 @@ class Player:
 
     def choose_gesture(self):
         pass
+
+    def gesture_update(self, gesture):
+        self.chosen_gesture = gesture
