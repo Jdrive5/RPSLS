@@ -39,7 +39,7 @@ class Game:
     def start_game(self):
         while self.player_one.wins < 2 and self.player_two.wins < 2:
             self.player_one.gesture_update()
-            self.player_two.gesture_update()
+            self.player_two.gesture_update(self.player_one.get_gesture())
             if self.player_one.gesture_update == self.player_two.gesture_update:
                 print(f"It's a tie! Choose again.")
                 sleep(2)
@@ -135,3 +135,7 @@ class Game:
         elif self.player_two.wins == 2:
             print(f"{self.player_two.name} wins 2 out of 3 and is the winner!")
             sleep(2)
+
+
+
+               

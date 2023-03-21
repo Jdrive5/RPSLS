@@ -20,6 +20,8 @@ class Human(Player):
             sleep(1)
             counter += 1
 
+    def get_gesture(self):
+        return self.choice_of_gesture
 
     def gesture_update(self):
         self.display_gestures()
